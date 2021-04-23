@@ -1,4 +1,4 @@
-# stok
+# istok_photo_ui
 
 ## Project setup
 ```
