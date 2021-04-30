@@ -1,16 +1,20 @@
 <template>
   <div class="images">
-    <div class="gallery-row">
-      <ul>
-        <div class="gallery-container">
-          <lightbox :items="images"></lightbox>
+    <el-row type="flex" class="gallery-row" justify="center">
+      <el-col :span="24">
+        <div class="grid-content h-600">
+          <lightbox cells="4" :items="images"></lightbox>
         </div>
-        <div class="pagination">
+      </el-col>
+    </el-row>
+    <el-row type="flex" class="gallery-row" justify="center">
+      <el-col :span="8">
+        <div class="grid-content">
           <el-pagination background layout="prev, pager, next" :total="100">
           </el-pagination>
         </div>
-      </ul>
-    </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 <script>
@@ -52,20 +56,12 @@ export default {
 </script>
 
 <style>
-.gallery-container {
-  height: 604.8px;
-  width: 750px;
-}
-
 .gallery-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.grid-content {
+  border-radius: 75px;
+  min-height: 65px;
 }
 </style>
