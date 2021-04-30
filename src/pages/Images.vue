@@ -1,9 +1,15 @@
 <template>
   <div class="images">
     <div class="gallery-row">
-      <div class="gallery-container">
-        <lightbox :items="images"></lightbox>
-      </div>
+      <ul>
+        <div class="gallery-container">
+          <lightbox :items="images"></lightbox>
+        </div>
+        <div class="pagination">
+          <el-pagination background layout="prev, pager, next" :total="100">
+          </el-pagination>
+        </div>
+      </ul>
     </div>
   </div>
 </template>
@@ -52,6 +58,12 @@ export default {
 }
 
 .gallery-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
   display: flex;
   align-items: center;
   justify-content: center;
