@@ -2,14 +2,14 @@
   <div class="images">
     <el-row type="flex" class="gallery-row" justify="center">
       <el-col :span="24">
-        <div class="grid-content h-600">
+        <div class="grid-content">
           <lightbox cells="4" :items="images"></lightbox>
         </div>
       </el-col>
     </el-row>
     <el-row type="flex" class="gallery-row" justify="center">
-      <el-col :span="8">
-        <div class="grid-content">
+      <el-col :span="7">
+        <div class="grid-content-perfect">
           <el-pagination background layout="prev, pager, next" :total="100">
           </el-pagination>
         </div>
@@ -57,11 +57,15 @@ export default {
 
 <style>
 .gallery-row {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .grid-content {
-  border-radius: 75px;
-  min-height: 65px;
+  border-radius: 0px;
+  min-height: 0px;
+}
+.grid-content-perfect{
+  border-radius: 0px;
+  max-height:auto;
 }
 </style>

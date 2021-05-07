@@ -3,14 +3,12 @@
     <el-tabs type="border-card">
       <el-tab-pane label="Statistic">
         <el-row type="flex" class="gallery-row">
-          <el-col :span="6" justify="!end">
-            <div class="grid-content">
+          <el-col :span="6">
               <div class="small">
                 <bar-chart :chart-data="renderChart"></bar-chart>
               </div>
-            </div>
-          </el-col>
-          <el-col :span="6" justify="!end">
+            </el-col>
+          <el-col :span="6">
             <div class="small">
               <doughnut-chart :chart-data="renderChart"></doughnut-chart>
             </div>
@@ -65,7 +63,5 @@ export default {
 <style>
 .small {
   max-width: 300px;
-  min-width: 150px;
-  margin: 20px auto;
 }
 </style>
